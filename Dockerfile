@@ -1,5 +1,5 @@
 # 使用 Java 8 Alpine 作为基础镜像
-FROM openjdk:8-jdk-alpine
+FROM eclipse-temurin:8-jdk-alpine
 
 # 设置工作目录
 WORKDIR /app
