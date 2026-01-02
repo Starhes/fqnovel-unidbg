@@ -1,11 +1,11 @@
-# 使用 Java 8 Alpine 作为基础镜像
-FROM eclipse-temurin:8-jdk-alpine
+# 使用 Java 8 (Ubuntu) 作为基础镜像，解决 SSL 握手失败问题
+FROM eclipse-temurin:8-jdk
 
 # 设置工作目录
 WORKDIR /app
 
 # 安装 Maven
-RUN apk add --no-cache maven
+RUN apt-get update && apt-get install -y maven
 
 # 复制 pom.xml
 COPY pom.xml .
