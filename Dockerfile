@@ -1,5 +1,5 @@
-# 使用 Java 8 (Ubuntu) 作为基础镜像，解决 SSL 握手失败问题
-FROM eclipse-temurin:8-jdk
+# 使用 Java 11 (Ubuntu) 作为基础镜像，支持 java.net.http API
+FROM eclipse-temurin:11-jdk
 
 # 设置工作目录
 WORKDIR /app
